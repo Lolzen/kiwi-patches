@@ -1,0 +1,33 @@
+diff --git a/extensions/browser/extension_prefs_scope.h b/extensions/browser/extension_prefs_scope.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..00862c2b12c202c7bd829aedd8ffe81ca3d4053d
+--- /dev/null
++++ b/extensions/browser/extension_prefs_scope.h
+@@ -0,0 +1,27 @@
++// Copyright 2013 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#ifndef EXTENSIONS_BROWSER_EXTENSION_PREFS_SCOPE_H_
++#define EXTENSIONS_BROWSER_EXTENSION_PREFS_SCOPE_H_
++
++
++namespace extensions {
++
++// Scope for a preference.
++enum ExtensionPrefsScope {
++  // Regular profile and incognito.
++  kExtensionPrefsScopeRegular,
++  // Regular profile only.
++  kExtensionPrefsScopeRegularOnly,
++  // Incognito profile; preference is persisted to disk and remains active
++  // after a browser restart.
++  kExtensionPrefsScopeIncognitoPersistent,
++  // Incognito profile; preference is kept in memory and deleted when the
++  // incognito session is terminated.
++  kExtensionPrefsScopeIncognitoSessionOnly
++};
++
++}  // namespace extensions
++
++#endif  // EXTENSIONS_BROWSER_EXTENSION_PREFS_SCOPE_H_

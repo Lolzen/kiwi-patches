@@ -1,0 +1,7 @@
+diff --git a/chrome/browser/tab_group/OWNERS b/chrome/browser/tab_group/OWNERS
+new file mode 100644
+index 0000000000000000000000000000000000000000..c2dc2bc6d970d4560eeeba8650de43ad8b70173f
+--- /dev/null
++++ b/chrome/browser/tab_group/OWNERS
+@@ -0,0 +1 @@
++file://chrome/android/java/src/org/chromium/chrome/browser/tasks/OWNERS

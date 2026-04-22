@@ -1,0 +1,24 @@
+diff --git a/chrome/browser/active_use_util.cc b/chrome/browser/active_use_util.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..114517ad5f31eb16eb749c2b8d24f62f9966db47
+--- /dev/null
++++ b/chrome/browser/active_use_util.cc
+@@ -0,0 +1,18 @@
++// Copyright 2017 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "chrome/browser/active_use_util.h"
++
++#include "base/command_line.h"
++#include "build/build_config.h"
++#include "chrome/common/chrome_switches.h"
++#include "chrome/install_static/buildflags.h"
++
++bool ShouldRecordActiveUse(const base::CommandLine& command_line) {
++#if BUILDFLAG(IS_WIN) && !BUILDFLAG(USE_GOOGLE_UPDATE_INTEGRATION)
++  return false;
++#else
++  return command_line.GetSwitchValueNative(switches::kTryChromeAgain).empty();
++#endif
++}

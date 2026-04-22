@@ -1,0 +1,19 @@
+diff --git a/net/base/cache_metrics.cc b/net/base/cache_metrics.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..ce21976a2bd77820315058e2f64752f6a6dda694
+--- /dev/null
++++ b/net/base/cache_metrics.cc
+@@ -0,0 +1,13 @@
++// Copyright 2019 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "net/base/cache_metrics.h"
++
++namespace net {
++
++void MediaCacheStatusResponseHistogram(MediaResponseCacheType type) {
++  UMA_HISTOGRAM_ENUMERATION("Net.MediaCache.Response.EnabledOrDisabled", type);
++}
++
++}  // namespace net

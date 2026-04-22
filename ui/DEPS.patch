@@ -1,0 +1,16 @@
+diff --git a/ui/DEPS b/ui/DEPS
+new file mode 100644
+index 0000000000000000000000000000000000000000..154e1b6c593f48354a3b2157b0deb2281938e1d5
+--- /dev/null
++++ b/ui/DEPS
+@@ -0,0 +1,10 @@
++include_rules = [
++  # Components within ui must state their dependencies explicitly.
++  "-ui",
++]
++
++specific_include_rules = {
++  ".*unittest\.mm": [
++    "+ui/base/test",
++  ],
++}

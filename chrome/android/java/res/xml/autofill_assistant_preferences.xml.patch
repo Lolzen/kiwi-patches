@@ -1,0 +1,51 @@
+diff --git a/chrome/android/java/res/xml/autofill_assistant_preferences.xml b/chrome/android/java/res/xml/autofill_assistant_preferences.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..8adbb9ad80481ad7ef0ed8dd3b95d9e4a0c29b9a
+--- /dev/null
++++ b/chrome/android/java/res/xml/autofill_assistant_preferences.xml
+@@ -0,0 +1,45 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++Copyright 2020 The Chromium Authors
++Use of this source code is governed by a BSD-style license that can be
++found in the LICENSE file.
++-->
++
++<PreferenceScreen
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto">
++    <PreferenceCategory
++        android:key="web_assistance"
++        android:title="@string/prefs_web_assistance_section_title">
++
++      <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
++          android:key="autofill_assistant_switch"
++          android:title="@string/prefs_autofill_assistant_get_help_title"
++          android:summary="@string/prefs_autofill_assistant_get_help_summary"
++          android:persistent="false"/>
++
++      <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
++          android:key="proactive_help_switch"
++          android:title="@string/prefs_autofill_assistant_proactive_help_title"
++          android:summary="@string/prefs_autofill_assistant_proactive_help_summary"
++          android:persistent="false"/>
++
++      <org.chromium.components.browser_ui.settings.TextMessagePreference
++          android:key="google_services_settings_link"
++          android:summary="@string/prefs_proactive_help_sync_link"
++          app:allowDividerAbove="false"
++          app:allowDividerBelow="false" />
++    </PreferenceCategory>
++
++    <PreferenceCategory
++        android:key="voice_assistance"
++        android:title="@string/avs_setting_category_title"
++        app:allowDividerBelow="false">
++        <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
++            android:key="voice_assistance_enabled"
++            android:title="@string/avs_setting_enabled_title"
++            android:summary="@string/avs_setting_enabled_description"
++            android:persistent="false" />
++    </PreferenceCategory>
++
++</PreferenceScreen>

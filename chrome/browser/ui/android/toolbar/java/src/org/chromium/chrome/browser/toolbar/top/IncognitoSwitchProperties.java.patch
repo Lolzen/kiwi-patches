@@ -1,0 +1,29 @@
+diff --git a/chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/IncognitoSwitchProperties.java b/chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/IncognitoSwitchProperties.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..93f0b7ca91a8d85db0033b30c5d2181761b63eb9
+--- /dev/null
++++ b/chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/IncognitoSwitchProperties.java
+@@ -0,0 +1,23 @@
++// Copyright 2019 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.chrome.browser.toolbar.top;
++
++import android.widget.CompoundButton.OnCheckedChangeListener;
++
++import org.chromium.ui.modelutil.PropertyKey;
++import org.chromium.ui.modelutil.PropertyModel;
++
++/** List of the incognito switch properties. */
++class IncognitoSwitchProperties {
++    public static final PropertyModel.WritableBooleanPropertyKey IS_VISIBLE =
++            new PropertyModel.WritableBooleanPropertyKey();
++    public static final PropertyModel.WritableBooleanPropertyKey IS_INCOGNITO =
++            new PropertyModel.WritableBooleanPropertyKey();
++    public static final PropertyModel
++            .WritableObjectPropertyKey<OnCheckedChangeListener> ON_CHECKED_CHANGE_LISTENER =
++            new PropertyModel.WritableObjectPropertyKey<OnCheckedChangeListener>();
++    public static final PropertyKey[] ALL_KEYS =
++            new PropertyKey[] {IS_VISIBLE, IS_INCOGNITO, ON_CHECKED_CHANGE_LISTENER};
++}

@@ -1,0 +1,16 @@
+diff --git a/chrome/browser/tab_group/DEPS b/chrome/browser/tab_group/DEPS
+new file mode 100644
+index 0000000000000000000000000000000000000000..c7889fbddcf4534dcfe5c1b50151e9978f06c9e0
+--- /dev/null
++++ b/chrome/browser/tab_group/DEPS
+@@ -0,0 +1,10 @@
++noparent = True
++
++include_rules = [
++  "+base/android/java",
++  "+base/test/android/junit",
++  "+chrome/browser/tab/java",
++  "+chrome/browser/tabmodel/android/java",
++  "+chrome/test/android/javatests/src/org/chromium/chrome/test/util/browser/Features.java",
++  "+testing/android/junit/java/src/org/chromium/testing/local/LocalRobolectricTestRunner.java",
++]

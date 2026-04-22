@@ -1,0 +1,18 @@
+diff --git a/chrome/android/java/res/layout/power_bookmark_shopping_item_row.xml b/chrome/android/java/res/layout/power_bookmark_shopping_item_row.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..4fbff78ff232a117762c4c32fc708e49f8d3b10a
+--- /dev/null
++++ b/chrome/android/java/res/layout/power_bookmark_shopping_item_row.xml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++     Copyright 2021 The Chromium Authors
++     Use of this source code is governed by a BSD-style license that can be
++     found in the LICENSE file.
++-->
++
++<view class="org.chromium.chrome.browser.bookmarks.PowerBookmarkShoppingItemRow"
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:id="@+id/power_bookmark_shopping_row"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content" />

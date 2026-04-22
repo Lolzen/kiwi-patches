@@ -1,0 +1,19 @@
+diff --git a/chrome/android/java/res/layout/new_tab_page_cryptid_holder.xml b/chrome/android/java/res/layout/new_tab_page_cryptid_holder.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..88ab7eb75ff60fd786ce89756c6c426abc0cf045
+--- /dev/null
++++ b/chrome/android/java/res/layout/new_tab_page_cryptid_holder.xml
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++Copyright 2020 The Chromium Authors
++Use of this source code is governed by a BSD-style license that can be
++found in the LICENSE file.
++-->
++<ImageView
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:contentDescription="@null" />

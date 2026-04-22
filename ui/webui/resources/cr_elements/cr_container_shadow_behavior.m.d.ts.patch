@@ -1,0 +1,18 @@
+diff --git a/ui/webui/resources/cr_elements/cr_container_shadow_behavior.m.d.ts b/ui/webui/resources/cr_elements/cr_container_shadow_behavior.m.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..f45debcaa1027edae05718870884acc9572fbf3f
+--- /dev/null
++++ b/ui/webui/resources/cr_elements/cr_container_shadow_behavior.m.d.ts
+@@ -0,0 +1,12 @@
++// Copyright 2021 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++export {CrContainerShadowBehavior};
++
++interface CrContainerShadowBehavior {
++  enableShadowBehavior(enable: boolean): void;
++  showDropShadows(): void;
++}
++
++declare const CrContainerShadowBehavior: object;

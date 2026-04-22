@@ -1,0 +1,37 @@
+diff --git a/chrome/browser/ui/signin_modal_dialog_impl.cc b/chrome/browser/ui/signin_modal_dialog_impl.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..546454c1aa8837e138d633d552e5f5afd9c38bd3
+--- /dev/null
++++ b/chrome/browser/ui/signin_modal_dialog_impl.cc
+@@ -0,0 +1,31 @@
++// Copyright 2021 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "chrome/browser/ui/signin_modal_dialog_impl.h"
++
++SigninModalDialogImpl::SigninModalDialogImpl(
++    SigninViewControllerDelegate* delegate,
++    base::OnceClosure on_close_callback)
++    : SigninModalDialog(std::move(on_close_callback)), delegate_(delegate) {
++  delegate_observation_.Observe(delegate_);
++}
++
++SigninModalDialogImpl::~SigninModalDialogImpl() = default;
++
++void SigninModalDialogImpl::CloseModalDialog() {
++  delegate_->CloseModalSignin();
++}
++
++void SigninModalDialogImpl::ResizeNativeView(int height) {
++  delegate_->ResizeNativeView(height);
++}
++
++content::WebContents*
++SigninModalDialogImpl::GetModalDialogWebContentsForTesting() {
++  return delegate_->GetWebContents();
++}
++
++void SigninModalDialogImpl::OnModalDialogClosed() {
++  NotifyModalDialogClosed();
++}

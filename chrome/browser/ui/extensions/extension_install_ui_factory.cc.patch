@@ -1,0 +1,23 @@
+diff --git a/chrome/browser/ui/extensions/extension_install_ui_factory.cc b/chrome/browser/ui/extensions/extension_install_ui_factory.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..c1d9c68cdbcc7c00e41c8b04ca2dccdf190bcd12
+--- /dev/null
++++ b/chrome/browser/ui/extensions/extension_install_ui_factory.cc
+@@ -0,0 +1,17 @@
++// Copyright 2014 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "chrome/browser/ui/extensions/extension_install_ui_factory.h"
++
++#include "chrome/browser/ui/extensions/extension_install_ui_default.h"
++
++namespace extensions {
++
++std::unique_ptr<ExtensionInstallUI> CreateExtensionInstallUI(
++    content::BrowserContext* context) {
++  return std::unique_ptr<ExtensionInstallUI>(
++      new ExtensionInstallUIDefault(context));
++}
++
++}  // namespace extensions

@@ -1,0 +1,19 @@
+diff --git a/chrome/browser/resources/.eslintrc.js b/chrome/browser/resources/.eslintrc.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..4b88951a1fd2a7124032e910f7b3b74fd0e3abf1
+--- /dev/null
++++ b/chrome/browser/resources/.eslintrc.js
+@@ -0,0 +1,13 @@
++// Copyright 2022 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++module.exports = {
++  'env' : {
++    'browser' : true,
++    'es6' : true,
++  },
++  'rules' : {
++    'eqeqeq' : ['error', 'always', {'null' : 'ignore'}],
++  },
++};

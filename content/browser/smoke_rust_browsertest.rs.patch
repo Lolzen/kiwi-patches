@@ -1,0 +1,28 @@
+diff --git a/content/browser/smoke_rust_browsertest.rs b/content/browser/smoke_rust_browsertest.rs
+new file mode 100644
+index 0000000000000000000000000000000000000000..17f56beed1c6fd317193ad0a572f4cc3b2263fb7
+--- /dev/null
++++ b/content/browser/smoke_rust_browsertest.rs
+@@ -0,0 +1,22 @@
++// Copyright 2022 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++use std::{error::Error, pin::Pin, result::Result};
++
++use content_public_browsertest_support::ContentBrowserTest;
++use rust_gtest_interop::prelude::*;
++
++#[gtest(SmokeRustBrowserTest, Smoke)]
++#[gtest_suite(ContentBrowserTest)]
++fn test(_bt: Pin<&mut ContentBrowserTest>) -> Result<(), Box<dyn Error>> {
++    // let mut server = bt.embedded_test_server_mut();
++    // assert_true!(server.start());
++
++    // GURL url = server.GetURL(kTestFile);
++
++    // let shell = bt.shell();
++    // expect_true!(NavigateToURL(shell, url));
++
++    Ok(())
++}

@@ -1,0 +1,23 @@
+diff --git a/base/nodebug_assertion.cc b/base/nodebug_assertion.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..e25704196afdc7963af1adc3a1a6c6eeaefcaea5
+--- /dev/null
++++ b/base/nodebug_assertion.cc
+@@ -0,0 +1,17 @@
++// Copyright 2022 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include <__config>
++
++#include "base/base_export.h"
++#include "base/immediate_crash.h"
++
++_LIBCPP_BEGIN_NAMESPACE_STD
++
++_LIBCPP_NORETURN BASE_EXPORT void __libcpp_verbose_abort(char const* format,
++                                                         ...) {
++  IMMEDIATE_CRASH();
++}
++
++_LIBCPP_END_NAMESPACE_STD

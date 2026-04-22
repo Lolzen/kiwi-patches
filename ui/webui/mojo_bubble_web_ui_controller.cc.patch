@@ -1,0 +1,23 @@
+diff --git a/ui/webui/mojo_bubble_web_ui_controller.cc b/ui/webui/mojo_bubble_web_ui_controller.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..35504fff0854519259f0af646f5eb0b265c6f42d
+--- /dev/null
++++ b/ui/webui/mojo_bubble_web_ui_controller.cc
+@@ -0,0 +1,17 @@
++// Copyright 2020 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "ui/webui/mojo_bubble_web_ui_controller.h"
++
++#include "content/public/browser/web_ui.h"
++
++namespace ui {
++
++MojoBubbleWebUIController::MojoBubbleWebUIController(content::WebUI* contents,
++                                                     bool enable_chrome_send)
++    : MojoWebUIController(contents, enable_chrome_send) {}
++
++MojoBubbleWebUIController::~MojoBubbleWebUIController() = default;
++
++}  // namespace ui

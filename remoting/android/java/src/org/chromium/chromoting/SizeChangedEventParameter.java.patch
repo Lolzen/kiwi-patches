@@ -1,0 +1,27 @@
+diff --git a/remoting/android/java/src/org/chromium/chromoting/SizeChangedEventParameter.java b/remoting/android/java/src/org/chromium/chromoting/SizeChangedEventParameter.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..4a83645e5ce59812a82d5c314799572f82b66ce5
+--- /dev/null
++++ b/remoting/android/java/src/org/chromium/chromoting/SizeChangedEventParameter.java
+@@ -0,0 +1,21 @@
++// Copyright 2016 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.chromoting;
++
++/**
++ * The {@link Event} parameter for a size changed event.
++ *
++ * {@link android.graphics.Point} and {@link android.graphics.PointF} are both mutable, so this
++ * class uses two floats instead.
++ */
++public final class SizeChangedEventParameter {
++    public final int width;
++    public final int height;
++
++    public SizeChangedEventParameter(int width, int height) {
++        this.width = width;
++        this.height = height;
++    }
++}

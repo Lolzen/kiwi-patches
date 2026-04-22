@@ -1,0 +1,42 @@
+diff --git a/extensions/common/value_builder.cc b/extensions/common/value_builder.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..df45240c79e91279b52af9bd2b223afd5d764d94
+--- /dev/null
++++ b/extensions/common/value_builder.cc
+@@ -0,0 +1,36 @@
++// Copyright 2013 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "extensions/common/value_builder.h"
++
++#include <utility>
++
++#include "base/json/json_writer.h"
++#include "base/strings/string_piece.h"
++
++namespace extensions {
++
++// DictionaryBuilder
++
++DictionaryBuilder::DictionaryBuilder() : dict_(new base::DictionaryValue) {}
++
++DictionaryBuilder::DictionaryBuilder(const base::DictionaryValue& init)
++    : dict_(base::DictionaryValue::From(
++          base::Value::ToUniquePtrValue(init.Clone()))) {}
++
++DictionaryBuilder::~DictionaryBuilder() {}
++
++std::string DictionaryBuilder::ToJSON() const {
++  std::string json;
++  base::JSONWriter::WriteWithOptions(
++      *dict_, base::JSONWriter::OPTIONS_PRETTY_PRINT, &json);
++  return json;
++}
++
++// ListBuilder
++
++ListBuilder::ListBuilder() : list_(new base::ListValue) {}
++ListBuilder::~ListBuilder() {}
++
++}  // namespace extensions

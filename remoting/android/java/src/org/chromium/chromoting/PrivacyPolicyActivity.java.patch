@@ -1,0 +1,22 @@
+diff --git a/remoting/android/java/src/org/chromium/chromoting/PrivacyPolicyActivity.java b/remoting/android/java/src/org/chromium/chromoting/PrivacyPolicyActivity.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..60b7de53988a85aa482be1f9aa0e5519a644cc7a
+--- /dev/null
++++ b/remoting/android/java/src/org/chromium/chromoting/PrivacyPolicyActivity.java
+@@ -0,0 +1,16 @@
++// Copyright 2019 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.chromoting;
++
++/**
++ * The Activity for showing the privacy policy.
++ */
++public class PrivacyPolicyActivity extends WebViewActivity {
++    private static final String POLICY_URL = "https://policies.google.com/privacy";
++
++    public PrivacyPolicyActivity() {
++        super(R.string.privacy_policy, POLICY_URL);
++    }
++}

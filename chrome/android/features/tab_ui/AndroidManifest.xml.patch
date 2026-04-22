@@ -1,0 +1,25 @@
+diff --git a/chrome/android/features/tab_ui/AndroidManifest.xml b/chrome/android/features/tab_ui/AndroidManifest.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..15660508389eaf024256092bf82f114e3dc96647
+--- /dev/null
++++ b/chrome/android/features/tab_ui/AndroidManifest.xml
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++Copyright 2019 The Chromium Authors
++Use of this source code is governed by a BSD-style license that can be
++found in the LICENSE file.
++-->
++
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:dist="http://schemas.android.com/apk/distribution"
++    featureSplit="tab_ui">
++
++    <application></application>
++    <dist:module
++        dist:onDemand="true"
++        dist:title="@string/tab_management_module_title">
++        <dist:fusing dist:include="true" />
++    </dist:module>
++</manifest>
++

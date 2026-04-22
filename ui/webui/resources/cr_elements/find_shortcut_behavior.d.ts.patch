@@ -1,0 +1,23 @@
+diff --git a/ui/webui/resources/cr_elements/find_shortcut_behavior.d.ts b/ui/webui/resources/cr_elements/find_shortcut_behavior.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..5e113753d1e06f6849f12d1b70375c9390b99b23
+--- /dev/null
++++ b/ui/webui/resources/cr_elements/find_shortcut_behavior.d.ts
+@@ -0,0 +1,17 @@
++// Copyright 2021 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++export interface FindShortcutBehavior {
++  findShortcutListenOnAttach: boolean;
++  becomeActiveFindShortcutListener(): void;
++  handleFindShortcut(modalContextOpen: boolean): boolean;
++  removeSelfAsFindShortcutListener(): void;
++  searchInputHasFocus(): boolean;
++}
++
++declare const FindShortcutBehavior: object;
++
++export const FindShortcutManager: {
++  listeners: FindShortcutBehavior[],
++};

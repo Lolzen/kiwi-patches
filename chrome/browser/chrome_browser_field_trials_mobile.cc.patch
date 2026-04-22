@@ -1,0 +1,21 @@
+diff --git a/chrome/browser/chrome_browser_field_trials_mobile.cc b/chrome/browser/chrome_browser_field_trials_mobile.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..14d94108d63df21a55d6810fc12ee478a679c6f6
+--- /dev/null
++++ b/chrome/browser/chrome_browser_field_trials_mobile.cc
+@@ -0,0 +1,15 @@
++// Copyright 2013 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "chrome/browser/chrome_browser_field_trials_mobile.h"
++
++#include "chrome/browser/browser_process.h"
++
++namespace chrome {
++
++void SetupMobileFieldTrials() {
++  DCHECK(!g_browser_process);
++}
++
++}  // namespace chrome

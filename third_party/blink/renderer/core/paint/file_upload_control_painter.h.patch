@@ -1,0 +1,38 @@
+diff --git a/third_party/blink/renderer/core/paint/file_upload_control_painter.h b/third_party/blink/renderer/core/paint/file_upload_control_painter.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..2647b5e57ed1008ac145a7a5109c280373fa01b5
+--- /dev/null
++++ b/third_party/blink/renderer/core/paint/file_upload_control_painter.h
+@@ -0,0 +1,32 @@
++// Copyright 2014 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#ifndef THIRD_PARTY_BLINK_RENDERER_CORE_PAINT_FILE_UPLOAD_CONTROL_PAINTER_H_
++#define THIRD_PARTY_BLINK_RENDERER_CORE_PAINT_FILE_UPLOAD_CONTROL_PAINTER_H_
++
++#include "third_party/blink/renderer/platform/wtf/allocator/allocator.h"
++
++namespace blink {
++
++class LayoutFileUploadControl;
++struct PaintInfo;
++struct PhysicalOffset;
++
++class FileUploadControlPainter {
++  STACK_ALLOCATED();
++
++ public:
++  FileUploadControlPainter(
++      const LayoutFileUploadControl& layout_file_upload_control)
++      : layout_file_upload_control_(layout_file_upload_control) {}
++
++  void PaintObject(const PaintInfo&, const PhysicalOffset& paint_offset);
++
++ private:
++  const LayoutFileUploadControl& layout_file_upload_control_;
++};
++
++}  // namespace blink
++
++#endif  // THIRD_PARTY_BLINK_RENDERER_CORE_PAINT_FILE_UPLOAD_CONTROL_PAINTER_H_

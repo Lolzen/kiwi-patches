@@ -1,0 +1,20 @@
+diff --git a/third_party/blink/renderer/core/css/css_scroll_timeline_rule.idl b/third_party/blink/renderer/core/css/css_scroll_timeline_rule.idl
+new file mode 100644
+index 0000000000000000000000000000000000000000..5e5115d5aa9fe6e6e1b8d5cfaf08f2863fe34aa5
+--- /dev/null
++++ b/third_party/blink/renderer/core/css/css_scroll_timeline_rule.idl
+@@ -0,0 +1,14 @@
++// Copyright 2020 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++[
++    Exposed=Window,
++    RuntimeEnabled=CSSScrollTimeline
++] interface CSSScrollTimelineRule : CSSRule {
++    readonly attribute CSSOMString name;
++    readonly attribute CSSOMString source;
++    readonly attribute CSSOMString orientation;
++    readonly attribute CSSOMString start;
++    readonly attribute CSSOMString end;
++};

@@ -1,0 +1,11 @@
+diff --git a/chrome/browser/resources/supervised_user_error_page_resources.grdp b/chrome/browser/resources/supervised_user_error_page_resources.grdp
+new file mode 100644
+index 0000000000000000000000000000000000000000..da3164e08dcb1efc7670d9f66b625efc6708eea4
+--- /dev/null
++++ b/chrome/browser/resources/supervised_user_error_page_resources.grdp
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<grit-part>
++  <include name="IDR_SUPERVISED_USER_BLOCK_INTERSTITIAL_HTML" file="supervised_user/supervised_user_error_page/resources/supervised_user_block_interstitial.html" flattenhtml="true" type="BINDATA" compress="brotli" />
++  <include name="IDR_SUPERVISED_USER_BLOCK_INTERSTITIAL_V2_HTML" file="supervised_user/supervised_user_error_page/resources/supervised_user_block_interstitial_v2.html" flattenhtml="true" type="BINDATA" compress="brotli" />
++</grit-part>

@@ -1,0 +1,20 @@
+diff --git a/base/android/java/src/org/chromium/base/JniException.java b/base/android/java/src/org/chromium/base/JniException.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..8efab26d306ac25fe92a4425eda26c619000d7de
+--- /dev/null
++++ b/base/android/java/src/org/chromium/base/JniException.java
+@@ -0,0 +1,14 @@
++// Copyright 2019 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.base;
++
++/**
++ *  Error when calling native methods.
++ */
++public class JniException extends RuntimeException {
++    public JniException(String msg) {
++        super(msg);
++    }
++}

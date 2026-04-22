@@ -1,0 +1,29 @@
+diff --git a/base/android/java/src/org/chromium/base/Consumer.java b/base/android/java/src/org/chromium/base/Consumer.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..10c4082d4712ba235d6888b2e1f490f99afa042c
+--- /dev/null
++++ b/base/android/java/src/org/chromium/base/Consumer.java
+@@ -0,0 +1,23 @@
++// Copyright 2019 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.base;
++
++/**
++ * Based on Java 8's {@code java.util.function.Consumer}.
++ *
++ * <p>An operation that accepts a single input argument and returns no result.
++ *
++ * @param <T> The type of the input to the operation.
++ */
++public interface Consumer<T> {
++    // TODO(crbug.com/1034012): Remove once min Android API level reaches 24.
++
++    /**
++     * Performs this operation on the given argument.
++     *
++     * @param t The input argument.
++     */
++    void accept(T t);
++}

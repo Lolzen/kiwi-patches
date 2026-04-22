@@ -1,0 +1,15 @@
+diff --git a/ui/webui/resources/cr_elements/web_ui_listener_behavior.d.ts b/ui/webui/resources/cr_elements/web_ui_listener_behavior.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..a28615a8fd15fdf8078532dafadc7c9ab1569541
+--- /dev/null
++++ b/ui/webui/resources/cr_elements/web_ui_listener_behavior.d.ts
+@@ -0,0 +1,9 @@
++// Copyright 2021 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++export interface WebUIListenerBehavior {
++  addWebUIListener(eventName: string, callback: Function): void;
++}
++
++declare const WebUIListenerBehavior: object;

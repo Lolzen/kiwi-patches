@@ -1,0 +1,19 @@
+diff --git a/chrome/browser/fullscreen_fuchsia.cc b/chrome/browser/fullscreen_fuchsia.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..1ba4161b702bc71f70d60011ccf53ba50d68bc47
+--- /dev/null
++++ b/chrome/browser/fullscreen_fuchsia.cc
+@@ -0,0 +1,13 @@
++// Copyright 2021 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "chrome/browser/fullscreen.h"
++
++#include "base/notreached.h"
++
++bool IsFullScreenMode() {
++  // TODO(crbug.com/1233426):
++  NOTIMPLEMENTED_LOG_ONCE();
++  return false;
++}

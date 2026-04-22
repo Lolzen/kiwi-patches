@@ -1,0 +1,17 @@
+diff --git a/chrome/android/features/tab_ui/tab_ui_module.gni b/chrome/android/features/tab_ui/tab_ui_module.gni
+new file mode 100644
+index 0000000000000000000000000000000000000000..3fad048a4fac95aa7568733a5d53d4c1a0ab48b7
+--- /dev/null
++++ b/chrome/android/features/tab_ui/tab_ui_module.gni
+@@ -0,0 +1,11 @@
++# Copyright 2019 The Chromium Authors
++# Use of this source code is governed by a BSD-style license that can be
++# found in the LICENSE file.
++
++import("//chrome/android/features/tab_ui/buildflags.gni")
++
++tab_ui_module_desc = {
++  name = "tab_ui"
++  java_deps = [ "//chrome/android/features/tab_ui:java" ]
++  android_manifest = "//chrome/android/features/tab_ui/AndroidManifest.xml"
++}

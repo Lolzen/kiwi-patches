@@ -1,0 +1,20 @@
+diff --git a/chrome/browser/download/download_status_updater_fuchsia.cc b/chrome/browser/download/download_status_updater_fuchsia.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..3c54e3706952257ec1f7db6bce94c86fa7f4dafc
+--- /dev/null
++++ b/chrome/browser/download/download_status_updater_fuchsia.cc
+@@ -0,0 +1,14 @@
++// Copyright 2021 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "chrome/browser/download/download_status_updater.h"
++
++#include "base/notreached.h"
++
++void DownloadStatusUpdater::UpdateAppIconDownloadProgress(
++    download::DownloadItem* download) {
++  // TODO(crbug.com/1226242): Integrate with shell app-icon updates, if/when
++  // the platform supports them.
++  NOTIMPLEMENTED_LOG_ONCE();
++}

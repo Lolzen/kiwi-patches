@@ -1,0 +1,23 @@
+diff --git a/extensions/common/file_test_util.cc b/extensions/common/file_test_util.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..b2a916720ca316f8aae26c646ab52272cc6390ec
+--- /dev/null
++++ b/extensions/common/file_test_util.cc
+@@ -0,0 +1,17 @@
++// Copyright 2019 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "extensions/common/file_test_util.h"
++#include "base/files/file_util.h"
++
++namespace extensions {
++namespace file_test_util {
++
++bool WriteFile(const base::FilePath& path, base::StringPiece content) {
++  return base::WriteFile(path, content.data(), content.size()) ==
++         static_cast<int>(content.size());
++}
++
++}  // namespace file_test_util
++}  // namespace extensions

@@ -1,0 +1,10 @@
+diff --git a/ui/webui/resources/cr_elements/cr_scrollable_behavior.html b/ui/webui/resources/cr_elements/cr_scrollable_behavior.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..ac1ac8323ff36063a8aeff4cc1fc73fcc10aa199
+--- /dev/null
++++ b/ui/webui/resources/cr_elements/cr_scrollable_behavior.html
+@@ -0,0 +1,4 @@
++<link rel="import" href="../html/polymer.html">
++
++<link rel="import" href="chrome://resources/polymer/v1_0/iron-list/iron-list.html">
++<script src="cr_scrollable_behavior.js"></script>

@@ -1,0 +1,15 @@
+diff --git a/components/.eslintrc.js b/components/.eslintrc.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..40ac3808f6f2060f8ab040770f301057e614bdad
+--- /dev/null
++++ b/components/.eslintrc.js
+@@ -0,0 +1,9 @@
++// Copyright 2019 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++module.exports = {
++  'rules' : {
++    'no-restricted-properties' : 'off',
++  },
++};

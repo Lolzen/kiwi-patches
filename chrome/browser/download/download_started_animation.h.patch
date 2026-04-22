@@ -1,0 +1,29 @@
+diff --git a/chrome/browser/download/download_started_animation.h b/chrome/browser/download/download_started_animation.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..e919c774c71dc4eb575f944002996b49593eba22
+--- /dev/null
++++ b/chrome/browser/download/download_started_animation.h
+@@ -0,0 +1,23 @@
++// Copyright 2009 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#ifndef CHROME_BROWSER_DOWNLOAD_DOWNLOAD_STARTED_ANIMATION_H_
++#define CHROME_BROWSER_DOWNLOAD_DOWNLOAD_STARTED_ANIMATION_H_
++
++namespace content {
++class WebContents;
++}
++
++class DownloadStartedAnimation {
++ public:
++  DownloadStartedAnimation(const DownloadStartedAnimation&) = delete;
++  DownloadStartedAnimation& operator=(const DownloadStartedAnimation&) = delete;
++
++  static void Show(content::WebContents* web_contents);
++
++ private:
++  DownloadStartedAnimation() { }
++};
++
++#endif  // CHROME_BROWSER_DOWNLOAD_DOWNLOAD_STARTED_ANIMATION_H_

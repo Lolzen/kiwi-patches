@@ -1,0 +1,19 @@
+diff --git a/ui/webui/.eslintrc.js b/ui/webui/.eslintrc.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..5498ee85e8aa61ea9ba1fafe9560a648df20e5f5
+--- /dev/null
++++ b/ui/webui/.eslintrc.js
+@@ -0,0 +1,13 @@
++// Copyright 2020 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++module.exports = {
++  'env': {
++    'browser': true,
++    'es6': true,
++  },
++  'rules': {
++    'eqeqeq': ['error', 'always', {'null': 'ignore'}],
++  },
++};

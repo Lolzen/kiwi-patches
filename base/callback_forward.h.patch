@@ -1,0 +1,30 @@
+diff --git a/base/callback_forward.h b/base/callback_forward.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..52e00e2f876d19f4d3b65cf2417dbdf28c226d66
+--- /dev/null
++++ b/base/callback_forward.h
+@@ -0,0 +1,24 @@
++// Copyright 2011 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#ifndef BASE_CALLBACK_FORWARD_H_
++#define BASE_CALLBACK_FORWARD_H_
++
++namespace base {
++
++template <typename Signature>
++class OnceCallback;
++
++template <typename Signature>
++class RepeatingCallback;
++
++// Syntactic sugar to make OnceClosure<void()> and RepeatingClosure<void()>
++// easier to declare since they will be used in a lot of APIs with delayed
++// execution.
++using OnceClosure = OnceCallback<void()>;
++using RepeatingClosure = RepeatingCallback<void()>;
++
++}  // namespace base
++
++#endif  // BASE_CALLBACK_FORWARD_H_

@@ -1,0 +1,28 @@
+diff --git a/chrome/browser/extensions/extension_storage_apitest.cc b/chrome/browser/extensions/extension_storage_apitest.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..1989209a31ef60b2c1416695c57637ee1036b924
+--- /dev/null
++++ b/chrome/browser/extensions/extension_storage_apitest.cc
+@@ -0,0 +1,22 @@
++// Copyright 2011 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "build/build_config.h"
++#include "chrome/browser/extensions/extension_apitest.h"
++#include "content/public/test/browser_test.h"
++
++namespace extensions {
++
++// Flaky for Mac: crbug.com/1141100
++// TODO(crbug.com/1317431): WebSQL does not work on Fuchsia.
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA)
++#define MAYBE_Storage DISABLED_Storage
++#else
++#define MAYBE_Storage Storage
++#endif
++IN_PROC_BROWSER_TEST_F(ExtensionApiTest, MAYBE_Storage) {
++  ASSERT_TRUE(RunExtensionTest("storage")) << message_;
++}
++
++}  // namespace extensions

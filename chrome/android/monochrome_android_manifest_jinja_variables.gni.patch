@@ -1,0 +1,19 @@
+diff --git a/chrome/android/monochrome_android_manifest_jinja_variables.gni b/chrome/android/monochrome_android_manifest_jinja_variables.gni
+new file mode 100644
+index 0000000000000000000000000000000000000000..4a5b814440b8c928ac4433ee6a8a2a596d628287
+--- /dev/null
++++ b/chrome/android/monochrome_android_manifest_jinja_variables.gni
+@@ -0,0 +1,13 @@
++# Copyright 2016 The Chromium Authors
++# Use of this source code is governed by a BSD-style license that can be
++# found in the LICENSE file.
++
++import("//chrome/android/modules/buildflags.gni")
++
++use_32bit_abi_jinja_variable = "use32bitAbi=android:use32bitAbi=\"true\""
++
++monochrome_android_manifest_jinja_variables = [
++  "min_sdk_version=24",
++  "sandboxed_service_exported=true",
++  use_32bit_abi_jinja_variable,
++]

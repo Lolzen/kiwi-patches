@@ -1,0 +1,14 @@
+diff --git a/chrome/android/features/tab_ui/buildflags.gni b/chrome/android/features/tab_ui/buildflags.gni
+new file mode 100644
+index 0000000000000000000000000000000000000000..1243188f7c2856ddbb48a008821f84c87b606a25
+--- /dev/null
++++ b/chrome/android/features/tab_ui/buildflags.gni
+@@ -0,0 +1,8 @@
++# Copyright 2019 The Chromium Authors
++# Use of this source code is governed by a BSD-style license that can be
++# found in the LICENSE file.
++
++declare_args() {
++  # Controls the feature being a DFM or not.
++  disable_tab_ui_dfm = true
++}

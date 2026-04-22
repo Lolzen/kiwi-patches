@@ -1,0 +1,22 @@
+diff --git a/ui/webui/resources/cr_elements/cr_scrollable_behavior.d.ts b/ui/webui/resources/cr_elements/cr_scrollable_behavior.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..2df5b3a52f0d6ced699dc50389dbbbd16ef3db2f
+--- /dev/null
++++ b/ui/webui/resources/cr_elements/cr_scrollable_behavior.d.ts
+@@ -0,0 +1,16 @@
++// Copyright 2021 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++import {IronListElement} from 'chrome://resources/polymer/v3_0/iron-list/iron-list.js';
++
++export {CrScrollableBehavior};
++
++interface CrScrollableBehavior {
++  updateScrollableContents(): void;
++  requestUpdateScroll(): void;
++  saveScroll(list: IronListElement): void;
++  restoreScroll(list: IronListElement): void;
++}
++
++declare const CrScrollableBehavior: object;

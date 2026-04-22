@@ -1,0 +1,20 @@
+diff --git a/chrome/browser/signin/investigator_dependency_provider.cc b/chrome/browser/signin/investigator_dependency_provider.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..601806d2669c6bc549892db3f045e4c6ef589982
+--- /dev/null
++++ b/chrome/browser/signin/investigator_dependency_provider.cc
+@@ -0,0 +1,14 @@
++// Copyright 2015 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "chrome/browser/signin/investigator_dependency_provider.h"
++
++InvestigatorDependencyProvider::InvestigatorDependencyProvider(Profile* profile)
++    : profile_(profile) {}
++
++InvestigatorDependencyProvider::~InvestigatorDependencyProvider() {}
++
++PrefService* InvestigatorDependencyProvider::GetPrefs() {
++  return profile_->GetPrefs();
++}

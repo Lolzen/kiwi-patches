@@ -1,0 +1,11 @@
+diff --git a/remoting/android/java/README b/remoting/android/java/README
+new file mode 100644
+index 0000000000000000000000000000000000000000..8bf22217a6fccfa6b457c896d947e36d97d550ca
+--- /dev/null
++++ b/remoting/android/java/README
+@@ -0,0 +1,5 @@
++Some of these icons are taken from the Google Material Design icon repository:
++https://github.com/google/material-design-icons
++
++These icons are released under an Attribution 4.0 International licence:
++http://creativecommons.org/licenses/by/4.0/

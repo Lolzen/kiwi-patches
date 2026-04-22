@@ -1,0 +1,27 @@
+diff --git a/components/soda_strings.grdp b/components/soda_strings.grdp
+new file mode 100644
+index 0000000000000000000000000000000000000000..998a4acbd55cff9a46faef1478b51597c0f5611f
+--- /dev/null
++++ b/components/soda_strings.grdp
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="utf-8"?>
++<grit-part>
++  <message name="IDS_SODA_LANGUAGE_DISPLAY_NAME_ENGLISH" desc="The display name of the SODA English language component.">
++    English
++  </message>
++  <message name="IDS_SODA_LANGUAGE_DISPLAY_NAME_FRENCH" desc="The display name of the SODA French language component.">
++    French
++  </message>
++  <message name="IDS_SODA_LANGUAGE_DISPLAY_NAME_GERMAN" desc="The display name of the SODA German language component.">
++    German
++  </message>
++  <message name="IDS_SODA_LANGUAGE_DISPLAY_NAME_ITALIAN" desc="The display name of the SODA Italian language component.">
++    Italian
++  </message>
++  <message name="IDS_SODA_LANGUAGE_DISPLAY_NAME_JAPANESE" desc="The display name of the SODA Japanese language component.">
++    Japanese
++  </message>
++  <message name="IDS_SODA_LANGUAGE_DISPLAY_NAME_SPANISH" desc="The display name of the SODA Spanish language component.">
++    Spanish
++  </message>
++</grit-part>

@@ -1,0 +1,30 @@
+diff --git a/chrome/android/java/res/layout/compact_price_drop_view.xml b/chrome/android/java/res/layout/compact_price_drop_view.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..e0d0bc9edb677ed1d9db7e5d3ad5f95937df4579
+--- /dev/null
++++ b/chrome/android/java/res/layout/compact_price_drop_view.xml
+@@ -0,0 +1,24 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++     Copyright 2022 The Chromium Authors
++     Use of this source code is governed by a BSD-style license that can be
++     found in the LICENSE file.
++-->
++
++<LinearLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:orientation="horizontal"
++    android:layout_width="wrap_content"
++    android:layout_height="wrap_content">
++    <TextView
++        android:id="@+id/primary_text"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:textAppearance="@style/TextAppearance.TextMedium.Secondary"
++        android:layout_marginEnd="8dp" />
++    <TextView
++        android:id="@+id/secondary_text"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:textAppearance="@style/TextAppearance.TextMedium.Secondary" />
++</LinearLayout>

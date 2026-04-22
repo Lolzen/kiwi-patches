@@ -1,0 +1,19 @@
+diff --git a/chrome/android/java/res/layout/explore_sites_section.xml b/chrome/android/java/res/layout/explore_sites_section.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..531246e6ac777abdc5fd900625649fa50abf9ae7
+--- /dev/null
++++ b/chrome/android/java/res/layout/explore_sites_section.xml
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++Copyright 2018 The Chromium Authors
++Use of this source code is governed by a BSD-style license that can be
++found in the LICENSE file.
++-->
++
++<org.chromium.chrome.browser.suggestions.tile.MostVisitedTilesGridLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content"
++    android:layout_gravity="top"
++    android:gravity="center_horizontal" />

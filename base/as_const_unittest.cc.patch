@@ -1,0 +1,34 @@
+diff --git a/base/as_const_unittest.cc b/base/as_const_unittest.cc
+new file mode 100644
+index 0000000000000000000000000000000000000000..acbad6ef079a3bc45a953015a2945f70438f1815
+--- /dev/null
++++ b/base/as_const_unittest.cc
+@@ -0,0 +1,28 @@
++// Copyright 2021 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "base/as_const.h"
++
++#include <type_traits>
++
++#include "testing/gtest/include/gtest/gtest.h"
++
++namespace base {
++namespace {
++
++TEST(AsConstTest, AsConst) {
++  int i = 123;
++  EXPECT_EQ(&i, &base::as_const(i));
++  static_assert(std::is_same<const int&, decltype(base::as_const(i))>::value,
++                "Error: base::as_const() returns an unexpected type");
++
++  const int ci = 456;
++  static_assert(&ci == &base::as_const(ci),
++                "Error: base::as_const() returns an unexpected reference");
++  static_assert(std::is_same<const int&, decltype(base::as_const(ci))>::value,
++                "Error: base::as_const() returns an unexpected type");
++}
++
++}  // namespace
++}  // namespace base

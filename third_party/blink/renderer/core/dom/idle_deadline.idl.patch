@@ -1,0 +1,18 @@
+diff --git a/third_party/blink/renderer/core/dom/idle_deadline.idl b/third_party/blink/renderer/core/dom/idle_deadline.idl
+new file mode 100644
+index 0000000000000000000000000000000000000000..d245dab9f6c985d0cea17f4927ff3e5352d71377
+--- /dev/null
++++ b/third_party/blink/renderer/core/dom/idle_deadline.idl
+@@ -0,0 +1,12 @@
++// Copyright 2015 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++// https://w3c.github.io/requestidlecallback/#window_extensions
++
++[
++    Exposed=Window
++] interface IdleDeadline {
++    double timeRemaining();
++    readonly attribute boolean didTimeout;
++};

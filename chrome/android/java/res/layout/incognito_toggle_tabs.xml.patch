@@ -1,0 +1,16 @@
+diff --git a/chrome/android/java/res/layout/incognito_toggle_tabs.xml b/chrome/android/java/res/layout/incognito_toggle_tabs.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..6ad3464107ed9ac257b24cf7f36c7aa92eea3262
+--- /dev/null
++++ b/chrome/android/java/res/layout/incognito_toggle_tabs.xml
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++Copyright 2018 The Chromium Authors
++Use of this source code is governed by a BSD-style license that can be
++found in the LICENSE file.
++-->
++
++<!-- The incognito toggle toolbar button. -->
++<org.chromium.chrome.browser.toolbar.IncognitoToggleTabLayout
++    style="@style/ToolbarButton" />

@@ -1,0 +1,18 @@
+diff --git a/chrome/android/java/src/org/chromium/chrome/browser/AppHooksImpl.java b/chrome/android/java/src/org/chromium/chrome/browser/AppHooksImpl.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..10e7ee390b418af3eab6e1ef60836f82e0ae7da3
+--- /dev/null
++++ b/chrome/android/java/src/org/chromium/chrome/browser/AppHooksImpl.java
+@@ -0,0 +1,11 @@
++// Copyright 2017 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.chrome.browser;
++
++/**
++ * Instantiatable version of {@link AppHooks}, don't add anything to this class!
++ * Downstream targets may provide a different implementation. See http://crbug/560466.
++ */
++public class AppHooksImpl extends AppHooks {}
+\ No newline at end of file

@@ -1,0 +1,22 @@
+diff --git a/ui/webui/resources/cr_elements/hidden_style_css.html b/ui/webui/resources/cr_elements/hidden_style_css.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..33bb9159d6fa5c86d257fb2f768e05d1a9746fe2
+--- /dev/null
++++ b/ui/webui/resources/cr_elements/hidden_style_css.html
+@@ -0,0 +1,16 @@
++<link rel="import" href="../html/polymer.html">
++
++<!-- Common style for Material Design WebUI, such that the |hidden| attributes
++  works within Shadow DOM. -->
++<dom-module id="cr-hidden-style">
++  <template>
++    <style>
++      /* Included here so we don't have to include "iron-positioning" in every
++       * stylesheet. See crbug.com/498405. */
++      [hidden],
++      :host([hidden]) {
++        display: none !important;
++      }
++    </style>
++  </template>
++</dom-module>

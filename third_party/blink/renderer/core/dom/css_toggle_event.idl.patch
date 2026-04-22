@@ -1,0 +1,23 @@
+diff --git a/third_party/blink/renderer/core/dom/css_toggle_event.idl b/third_party/blink/renderer/core/dom/css_toggle_event.idl
+new file mode 100644
+index 0000000000000000000000000000000000000000..75babf987d5fc4f48b2bfd347c95a4de5c3be051
+--- /dev/null
++++ b/third_party/blink/renderer/core/dom/css_toggle_event.idl
+@@ -0,0 +1,17 @@
++// Copyright 2022 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++[
++    Exposed=Window,
++    RuntimeEnabled=CSSToggles
++] interface CSSToggleEvent : Event {
++  constructor(DOMString type, optional CSSToggleEventInit eventInitDict = {});
++  readonly attribute DOMString toggleName;
++  readonly attribute CSSToggle? toggle;
++};
++
++dictionary CSSToggleEventInit : EventInit {
++  DOMString toggleName = "";
++  CSSToggle? toggle = null;
++};

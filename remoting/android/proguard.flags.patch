@@ -1,0 +1,15 @@
+diff --git a/remoting/android/proguard.flags b/remoting/android/proguard.flags
+new file mode 100644
+index 0000000000000000000000000000000000000000..af340b28ca76b64602219bee5fe9a1cca32d5000
+--- /dev/null
++++ b/remoting/android/proguard.flags
+@@ -0,0 +1,9 @@
++# Copyright 2019 The Chromium Authors
++# Use of this source code is governed by a BSD-style license that can be
++# found in the LICENSE file.
++
++# Use R8's "shrinking" (unreachable-code removal), but do not enable any
++# stack trace mangling steps until ProGuard mapping files are archived.
++# TODO(crbug.com/1026161): Enable ProGuard optimizations.
++-dontoptimize
++-dontobfuscate

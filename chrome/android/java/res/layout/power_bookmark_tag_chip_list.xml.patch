@@ -1,0 +1,20 @@
+diff --git a/chrome/android/java/res/layout/power_bookmark_tag_chip_list.xml b/chrome/android/java/res/layout/power_bookmark_tag_chip_list.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..49b07561ccf1aa89504feeadbd9a30fb3fbc07d1
+--- /dev/null
++++ b/chrome/android/java/res/layout/power_bookmark_tag_chip_list.xml
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++     Copyright 2021 The Chromium Authors
++     Use of this source code is governed by a BSD-style license that can be
++     found in the LICENSE file.
++-->
++
++<view class="org.chromium.chrome.browser.bookmarks.PowerBookmarkTagChipList"
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    tools:ignore="UnusedResources"
++    android:id="@+id/power_bookmark_tag_chip_list"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content" />

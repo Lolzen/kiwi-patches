@@ -1,0 +1,49 @@
+diff --git a/chrome/browser/ui/android/omnibox/java/src/org/chromium/chrome/browser/omnibox/suggestions/OmniboxSuggestionUiType.java b/chrome/browser/ui/android/omnibox/java/src/org/chromium/chrome/browser/omnibox/suggestions/OmniboxSuggestionUiType.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..4e0a781f51c919d9b958d5a7c5564a6eee391ad3
+--- /dev/null
++++ b/chrome/browser/ui/android/omnibox/java/src/org/chromium/chrome/browser/omnibox/suggestions/OmniboxSuggestionUiType.java
+@@ -0,0 +1,43 @@
++// Copyright 2018 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.chrome.browser.omnibox.suggestions;
++
++import androidx.annotation.IntDef;
++
++import java.lang.annotation.Retention;
++import java.lang.annotation.RetentionPolicy;
++
++/**
++ * The different types of view that a suggestion can be.
++ *
++ * When modifying this list, please also update the
++ * - OmniboxSuggestionsDropdown#HistogramRecordingRecycledViewPool,
++ * - OmniboxSuggestionUiType histogram enum
++ * to reflect the expected/anticipated volume of views that may be reused and appropriate
++ * histogram details.
++ *
++ * Please note that the types below are also being recorded in a separate histogram, see:
++ * - SuggestionsMetrics#recordSuggestionsViewCreatedType()
++ * - SuggestionsMetrics#recordSuggestionsViewReusedType().
++ */
++@IntDef({OmniboxSuggestionUiType.DEFAULT, OmniboxSuggestionUiType.EDIT_URL_SUGGESTION,
++        OmniboxSuggestionUiType.ANSWER_SUGGESTION, OmniboxSuggestionUiType.ENTITY_SUGGESTION,
++        OmniboxSuggestionUiType.TAIL_SUGGESTION, OmniboxSuggestionUiType.CLIPBOARD_SUGGESTION,
++        OmniboxSuggestionUiType.HEADER, OmniboxSuggestionUiType.TILE_NAVSUGGEST,
++        OmniboxSuggestionUiType.PEDAL_SUGGESTION, OmniboxSuggestionUiType.COUNT})
++@Retention(RetentionPolicy.SOURCE)
++public @interface OmniboxSuggestionUiType {
++    int DEFAULT = 0;
++    int EDIT_URL_SUGGESTION = 1;
++    int ANSWER_SUGGESTION = 2;
++    int ENTITY_SUGGESTION = 3;
++    int TAIL_SUGGESTION = 4;
++    int CLIPBOARD_SUGGESTION = 5;
++    int HEADER = 6;
++    int TILE_NAVSUGGEST = 7;
++    int PEDAL_SUGGESTION = 8;
++
++    int COUNT = 9;
++}

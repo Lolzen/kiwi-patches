@@ -1,0 +1,14 @@
+diff --git a/third_party/blink/renderer/core/css/css_try_rule.idl b/third_party/blink/renderer/core/css/css_try_rule.idl
+new file mode 100644
+index 0000000000000000000000000000000000000000..661a6ad0b7a503fc40e5107072a78ad20d47eba7
+--- /dev/null
++++ b/third_party/blink/renderer/core/css/css_try_rule.idl
+@@ -0,0 +1,8 @@
++// Copyright 2022 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++// TODO(crbug.com/1309178): Define CSSOM API for @try at rule.
++
++[Exposed=Window, RuntimeEnabled=CSSAnchorPositioning]
++interface CSSTryRule : CSSRule { };

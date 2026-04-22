@@ -1,0 +1,10 @@
+diff --git a/chrome/browser/tab_group/DIR_METADATA b/chrome/browser/tab_group/DIR_METADATA
+new file mode 100644
+index 0000000000000000000000000000000000000000..a85cfc7eeb9cbc6f6ef63fc5f3c03a205e182745
+--- /dev/null
++++ b/chrome/browser/tab_group/DIR_METADATA
+@@ -0,0 +1,4 @@
++monorail {
++  component: "UI>Browser>Mobile>TabSwitcher>Grid"
++}
++os: ANDROID

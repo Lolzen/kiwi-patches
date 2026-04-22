@@ -1,0 +1,17 @@
+diff --git a/third_party/blink/renderer/core/dom/iterator.idl b/third_party/blink/renderer/core/dom/iterator.idl
+new file mode 100644
+index 0000000000000000000000000000000000000000..64ed6ccc4343c9e3a4f857a599d32785a55d71ff
+--- /dev/null
++++ b/third_party/blink/renderer/core/dom/iterator.idl
+@@ -0,0 +1,11 @@
++// Copyright 2014 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++// http://people.mozilla.org/~jorendorff/es6-draft.html#sec-iterator-interface
++
++[
++    LegacyNoInterfaceObject
++] interface Iterator {
++    [CallWith=ScriptState, RaisesException] any next(optional any value);
++};

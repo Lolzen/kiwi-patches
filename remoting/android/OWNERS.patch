@@ -1,0 +1,13 @@
+diff --git a/remoting/android/OWNERS b/remoting/android/OWNERS
+new file mode 100644
+index 0000000000000000000000000000000000000000..e86e401a5f29f162ec92a8bced4ecb4d4c7a1647
+--- /dev/null
++++ b/remoting/android/OWNERS
+@@ -0,0 +1,7 @@
++# If you modify this, please also update
++# remoting/client/jni/OWNERS
++joedow@chromium.org
++lambroslambrou@chromium.org
++yuweih@chromium.org
++
++per-file lint-*.xml=*

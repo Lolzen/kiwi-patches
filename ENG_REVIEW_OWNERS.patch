@@ -1,0 +1,20 @@
+diff --git a/ENG_REVIEW_OWNERS b/ENG_REVIEW_OWNERS
+new file mode 100644
+index 0000000000000000000000000000000000000000..b103f4d46f0c3219dd35d608dab05fe2e86c01ca
+--- /dev/null
++++ b/ENG_REVIEW_OWNERS
+@@ -0,0 +1,14 @@
++# Current list of eng reviewers mostly for the purpose of reviewing
++# addings of top-level and third-party directories.
++
++# NOTE: keep this in sync with lsc-owners-override@chromium.org owners
++# by emailing lsc-policy@chromium.org when this list changes.
++creis@chromium.org
++estaab@chromium.org
++haraken@chromium.org
++jam@chromium.org
++pinkerton@chromium.org
++sky@chromium.org
++yfriedman@chromium.org
++# NOTE: keep this in sync with lsc-owners-override@chromium.org owners
++# by emailing lsc-policy@chromium.org when this list changes.

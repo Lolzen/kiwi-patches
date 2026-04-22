@@ -1,0 +1,12 @@
+diff --git a/chrome/android/java/res_chromium/OWNERS b/chrome/android/java/res_chromium/OWNERS
+new file mode 100644
+index 0000000000000000000000000000000000000000..8708130f2f66bf7327c2368d0296aec8222eeaeb
+--- /dev/null
++++ b/chrome/android/java/res_chromium/OWNERS
+@@ -0,0 +1,6 @@
++# This restriction is in place to avoid accidential addition to our top level
++# layout files, such as add duplicated assets, or introducing new colors when
++# we don't want them.
++set noparent
++
++file://ui/android/java/res/LAYOUT_OWNERS

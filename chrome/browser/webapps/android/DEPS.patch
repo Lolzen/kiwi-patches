@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/webapps/android/DEPS b/chrome/browser/webapps/android/DEPS
+new file mode 100644
+index 0000000000000000000000000000000000000000..d2ae3a4b5737172258cf19cd8975807cea2d64ba
+--- /dev/null
++++ b/chrome/browser/webapps/android/DEPS
+@@ -0,0 +1,6 @@
++# External directories and/or files that can be included from this module:
++include_rules = [
++  "+components/browser_ui/bottomsheet/android",
++  "+components/webapk/android",
++  "+content/public/android/java/src/org/chromium/content_public/browser",
++]

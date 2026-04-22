@@ -1,0 +1,17 @@
+diff --git a/third_party/blink/renderer/core/dom/css_toggle_map.idl b/third_party/blink/renderer/core/dom/css_toggle_map.idl
+new file mode 100644
+index 0000000000000000000000000000000000000000..7eeb26d4bf7780fa3bedd9ef3b1f3047bf76aebb
+--- /dev/null
++++ b/third_party/blink/renderer/core/dom/css_toggle_map.idl
+@@ -0,0 +1,11 @@
++// Copyright 2022 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++[
++    Exposed=Window,
++    RuntimeEnabled=CSSToggles
++] interface CSSToggleMap {
++  maplike<DOMString, CSSToggle>;
++  [RaisesException] CSSToggleMap set(DOMString key, CSSToggle value);
++};

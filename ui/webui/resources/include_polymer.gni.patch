@@ -1,0 +1,11 @@
+diff --git a/ui/webui/resources/include_polymer.gni b/ui/webui/resources/include_polymer.gni
+new file mode 100644
+index 0000000000000000000000000000000000000000..52daa91cc2319a470692a1d5f24b904842123dcb
+--- /dev/null
++++ b/ui/webui/resources/include_polymer.gni
+@@ -0,0 +1,5 @@
++# Copyright 2022 The Chromium Authors
++# Use of this source code is governed by a BSD-style license that can be
++# found in the LICENSE file.
++
++include_polymer = !is_android && !is_ios

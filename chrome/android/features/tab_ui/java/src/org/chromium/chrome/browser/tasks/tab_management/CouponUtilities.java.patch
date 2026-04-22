@@ -1,0 +1,24 @@
+diff --git a/chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/CouponUtilities.java b/chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/CouponUtilities.java
+new file mode 100644
+index 0000000000000000000000000000000000000000..c021dae2f797f86f4a88f7cf510a35d47bba5ad0
+--- /dev/null
++++ b/chrome/android/features/tab_ui/java/src/org/chromium/chrome/browser/tasks/tab_management/CouponUtilities.java
+@@ -0,0 +1,18 @@
++// Copyright 2022 The Chromium Authors
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++package org.chromium.chrome.browser.tasks.tab_management;
++import org.chromium.chrome.browser.flags.ChromeFeatureList;
++
++/**
++ * Utility class for coupons in Tab UI.
++ */
++public class CouponUtilities {
++    /**
++     * @return Whether commerce coupons feature flag is enabled.
++     */
++    public static boolean isCouponsOnTabsEnabled() {
++        return ChromeFeatureList.sCommerceCoupons.isEnabled();
++    }
++}

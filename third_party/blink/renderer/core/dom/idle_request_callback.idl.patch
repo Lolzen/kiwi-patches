@@ -1,0 +1,13 @@
+diff --git a/third_party/blink/renderer/core/dom/idle_request_callback.idl b/third_party/blink/renderer/core/dom/idle_request_callback.idl
+new file mode 100644
+index 0000000000000000000000000000000000000000..e2f9c0c0db6c28d931ac0d0002b84cba7883884e
+--- /dev/null
++++ b/third_party/blink/renderer/core/dom/idle_request_callback.idl
+@@ -0,0 +1,7 @@
++// Copyright 2015 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++// https://w3c.github.io/requestidlecallback/#window_extensions
++
++callback IdleRequestCallback = void (IdleDeadline deadline);
